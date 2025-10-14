@@ -1,0 +1,7 @@
+[project]
+name = "malahit-clip"
+version = "0.1.0"
+description = "A tool to generate SWL reports from Malahit DSP3 screenshots and audio records"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
