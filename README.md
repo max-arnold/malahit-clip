@@ -2,7 +2,7 @@
 
 A tool to generate SWL reports from Malahit DSP3 screenshots and audio records.
 
-<video src="https://raw.githubusercontent.com/max-arnold/malahit-clip/refs/heads/main/swl-report.mp4" controls width="720"></video>
+https://github.com/user-attachments/assets/1142324d-c385-46cc-8691-a1d10edcb703
 
 ## Run with uvx
 
