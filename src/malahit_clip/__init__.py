@@ -1,6 +1,7 @@
 import argparse
 import datetime
 import platform
+import ssl
 import stat
 import subprocess
 import tempfile
@@ -9,6 +10,7 @@ import zipfile
 from pathlib import Path
 from urllib.parse import urlparse
 
+import certifi
 from platformdirs import user_cache_dir
 from PIL import Image, ImageDraw, ImageFont
 
@@ -81,7 +83,11 @@ def fetch_and_extract(url, dst, members):
                 "User-Agent": USER_AGENT,
             },
         )
-        with urllib.request.urlopen(request) as response, open(tmp.name, "wb") as out:
+        context = ssl.create_default_context(cafile=certifi.where())
+        with (
+            urllib.request.urlopen(request, context=context) as response,
+            open(tmp.name, "wb") as out,
+        ):
             out.write(response.read())
         with zipfile.ZipFile(tmp.name) as z:
             for member in members:
