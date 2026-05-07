@@ -5,6 +5,7 @@ description = "A tool to generate SWL reports from Malahit DSP3 screenshots and 
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+  "pillow",
   "platformdirs",
 ]
 
