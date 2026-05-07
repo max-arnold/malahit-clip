@@ -1,13 +1,44 @@
 [project]
 name = "malahit-clip"
-version = "0.1.0"
+version = "0.1.1"
 description = "A tool to generate SWL reports from Malahit DSP3 screenshots and audio records"
 readme = "README.md"
 requires-python = ">=3.14"
+maintainers = [
+  { name = "Max Arnold" },
+]
+license = "MIT"
+license-files = ["LICENSE.md"]
+keywords = ["malahit", "sdr", "shortwave", "radio", "ffmpeg", "video"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "Operating System :: MacOS",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Multimedia :: Sound/Audio",
+  "Topic :: Multimedia :: Video",
+  "Topic :: Utilities",
+]
 dependencies = [
   "pillow",
   "platformdirs",
 ]
+
+[project.urls]
+Homepage = "https://github.com/max-arnold/malahit-clip"
+Repository = "https://github.com/max-arnold/malahit-clip"
+Issues = "https://github.com/max-arnold/malahit-clip/issues"
+
+[project.scripts]
+malahit-clip = "malahit_clip:main"
+
+[build-system]
+requires = ["uv_build>=0.11.6,<0.12"]
+build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
@@ -17,3 +48,7 @@ dev = [
 
 [tool.uv]
 exclude-newer = "3 days"
+
+[tool.uv.build-backend]
+module-name = "malahit_clip"
+module-root = "src"

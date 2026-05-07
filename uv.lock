@@ -9,7 +9,7 @@ exclude-newer-span = "P3D"
 [[package]]
 name = "malahit-clip"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "pillow" },
     { name = "platformdirs" },
