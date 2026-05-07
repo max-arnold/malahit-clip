@@ -2,6 +2,8 @@
 
 A tool to generate SWL reports from Malahit DSP3 screenshots and audio records.
 
+<video src="swl-report.mp4" controls width="720"></video>
+
 ## Run with uvx
 
 Install uv first:
